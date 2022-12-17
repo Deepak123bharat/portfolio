@@ -59,11 +59,46 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.flutter, images.redux, images.sass].map((circle, index) => (
-        <div className="circle-cmp app__flex" key={`circle-${index}`}>
-          <img src={circle} alt="profile_bg" />
-        </div>
-      ))}
+      <div
+        style={{ cursor: "pointer" }}
+        onClick={() =>
+          window.open(
+            "https://www.linkedin.com/in/deepak-singh-rathore-a100aa181/",
+            "_blank"
+          )
+        }
+        className="circle-cmp app__flex"
+        key={`circle-${0}`}
+      >
+        <img src={images.flutter} alt="profile_bg" />
+      </div>
+
+      <div
+        style={{ cursor: "pointer" }}
+        onClick={() =>
+          window.open(
+            "https://drive.google.com/file/d/12ZIFGAFEGWiLSavXGhr3vL5ACfeP35Pj/view?usp=sharing",
+            "_blank"
+          )
+        }
+        className="circle-cmp app__flex"
+        key={`circle-${1}`}
+      >
+        <img src={images.redux} alt="profile_bg" />
+      </div>
+      <div
+        style={{ cursor: "pointer" }}
+        onClick={() =>
+          window.open("https://github.com/Deepak123bharat", "_blank")
+        }
+        className="circle-cmp app__flex"
+        key={`circle-${2}`}
+      >
+        <img src={images.sass} alt="profile_bg" />
+      </div>
+      {/* {[images.flutter, images.redux, images.sass].map((circle, index) => (
+        
+      ))} */}
     </motion.div>
   </div>
 );
